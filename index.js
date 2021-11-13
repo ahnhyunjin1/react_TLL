@@ -4,7 +4,7 @@ const port = 5000
 const bodyParser = require('body-parser');
 const { User } = require("./models/User");
 
-//applicateon/www-form 데이터 가져오기
+//applicateon/www-form 데이터 가져오기! (폼 형태만)
 app.use(bodyParser.urlencoded({extended: true}));
 //json 타입 분석
 app.use(bodyParser.json());
