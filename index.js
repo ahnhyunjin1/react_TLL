@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 5000
 const bodyParser = require('body-parser');
+
+const config = require('./config/key');
+
 const { User } = require("./models/User");
 
 //applicateon/www-form 데이터 가져오기! (폼 형태만)
@@ -11,7 +14,7 @@ app.use(bodyParser.json());
 
 
 const mongoose = require("mongoose");
-const connect = mongoose.connect('mongodb+srv://anhyunjin:ahj961205@cluster0.qsqfx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+const connect = mongoose.connect(config.mongoURI)
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
