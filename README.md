@@ -8,3 +8,5 @@
 <hr/>
 
 21.11.14 로그인 가입정보를 Mongoose연결 후 Postman으로 테스트 (local::5000)
+
+21.12.04 mongoose 연결
